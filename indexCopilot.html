@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copilot - Ferramenta de Inteligência Artificial</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Cor de fundo geral */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1f1f1f;
+            color: #e5e5e5;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #4e80e1; /* Azul Copilot */
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Ícone do Copilot */
+        header img {
+            width: 50px;
+            height: 50px;
+            margin-top: 10px;
+        }
+
+        /* Container principal */
+        .container {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Estilos para cada seção */
+        .section {
+            background-color: #2d2d2d; /* Cinza escuro */
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            color: #6a3fb4; /* Roxo */
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            font-size: 1.8em;
+            color: #4e80e1; /* Azul */
+            margin-top: 20px;
+        }
+
+        .section ul {
+            margin-top: 10px;
+            list-style-type: none;
+        }
+
+        .section ul li {
+            font-size: 1.2em;
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .section ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #6a3fb4; /* Roxo */
+        }
+
+        .section ul li:hover {
+            color: #4e80e1; /* Azul */
+            cursor: pointer;
+        }
+
+        /* Botões principais */
+        .button {
+            background-color: #6a3fb4; /* Roxo */
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #4e80e1; /* Azul */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .button:active {
+            transform: scale(0.98);
+        }
+
+        /* Botões secundários */
+        .button-secondary {
+            background-color: #4e80e1; /* Azul */
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .button-secondary:hover {
+            background-color: #6a3fb4; /* Roxo */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .button-secondary:active {
+            transform: scale(0.98);
+        }
+
+        /* Botão de ação com animação */
+        .button-action {
+            background-color: #813a85; /* Preto */
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        .button-action:hover {
+            background-color: #333;
+        }
+
+        .button-action:active {
+            transform: scale(0.98);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Ícone do Copilot -->
+        <img src="image/Copilot.css.png" alt="Copilot Icon" />
+        <h1>Copilot - Ferramenta de Inteligência Artificial</h1>
+        <p>Explorando Inteligências Artificiais</p>
+    </header>
+
+    <div class="container">
+        <!-- Introdução -->
+        <div class="section" id="introducao">
+            <h2>Introdução</h2>
+            <p>O Copilot é uma ferramenta de inteligência artificial integrada ao Microsoft 365, projetada para auxiliar nas tarefas diárias. Ele utiliza linguagem natural para automatizar processos, gerar relatórios e oferecer insights com base em dados.</p>
+            <a href="#" class="button">Saiba mais</a>
+        </div>
+
+        <!-- Público-alvo -->
+        <div class="section" id="publico-alvo">
+            <h2>Público-alvo</h2>
+            <h3>Profissionais de Contabilidade</h3>
+            <ul>
+                <li>Contadores, auditores e analistas financeiros.</li>
+                <li>Automatizar lançamentos contábeis.</li>
+                <li>Gerar relatórios financeiros.</li>
+                <li>Criar projeções financeiras.</li>
+            </ul>
+
+            <h3>Departamentos financeiros de empresas</h3>
+            <ul>
+                <li>Equipes de finanças e controladoria de empresas de todos os portes.</li>
+                <li>Reconciliar contas.</li>
+                <li>Consolidar dados de múltiplas planilhas.</li>
+                <li>Preparar relatórios mensais e trimestrais.</li>
+            </ul>
+
+            <h3>Escritórios de contabilidade e consultoria</h3>
+            <ul>
+                <li>Escritórios que gerenciam a contabilidade de clientes diversos.</li>
+                <li>Produtividade, padronizar documentos e otimizar revisões.</li>
+            </ul>
+            <a href="#" class="button-secondary">Conheça mais</a>
+        </div>
+
+        <!-- Benefícios para o usuário -->
+        <div class="section" id="beneficios">
+            <h2>Benefícios para o Usuário</h2>
+            <ul>
+                <li>Personalização de conteúdos e recomendações.</li>
+                <li>Assistentes virtuais e automatização de tarefas.</li>
+                <li>Acesso rápido e inteligente à informação.</li>
+                <li>Experiência de serviços mais eficiente (ex: apps, saúde, transporte).</li>
+                <li>Maior segurança e detecção de fraudes.</li>
+            </ul>
+            <a href="#" class="button-action">Experimente Agora</a>
+        </div>
+
+        <!-- Malefícios -->
+        <div class="section" id="maleficios">
+            <h2>Malefícios</h2>
+            <ul>
+                <li>Sugestões incorretas: Pode gerar erros em fórmulas ou textos contábeis.</li>
+                <li>Riscos de privacidade: Pode expor dados sensíveis se mal utilizado.</li>
+                <li>Desatualização: Não acompanha automaticamente mudanças nas normas contábeis.</li>
+            </ul>
+        </div>
+
+        <!-- Limitações -->
+        <div class="section" id="limitacoes">
+            <h2>Limitações</h2>
+            <ul>
+                <li>Depende da qualidade dos dados.</li>
+                <li>Interpretação limitada de contextos técnicos.</li>
+                <li>Requer validação humana.</li>
+                <li>Necessita Microsoft 365 ativo.</li>
+            </ul>
+        </div>
+        <div class="section" id="Obrigada">
+            <h2>Obrigada</h2>
+            <ul>
+                <li>Amanda Maíra</li>
+                <li>Emanuelle Beatriz</li>
+                <li>Isabelli Baeza</li>
+                <li>Julia Oliveira</li>
+                <li>Larissa Lorena</li>
+                <li>Lívia Biasetto</li>
+                <li>Mayara Nicole</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
